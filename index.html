@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHX Plumber Pros | We Handle Residential & Light Commercial Plumbing</title>
+    <meta name="description" content="Plumbing services in Phoenix. We handle homes, apartments, and small commercial properties. Focused on what we do best.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hero {
+            background: #1e3a8a;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .scope-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+        .scope-intro h2 {
+            color: #1e40af;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .scope-intro p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .scope-section {
+            background: #eff6ff;
+            padding: 3rem 2rem;
+            margin: 0 -2rem 3rem -2rem;
+        }
+        .scope-section h2 {
+            text-align: center;
+            color: #1e40af;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .scope-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid #1e3a8a;
+        }
+        .scope-card h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+        .scope-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .boundaries-section {
+            margin: 3rem 0;
+        }
+        .boundaries-section h2 {
+            color: #1e40af;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .boundaries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .boundary-card {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #fbbf24;
+        }
+        .boundary-card h3 {
+            color: #92400e;
+            margin-bottom: 0.75rem;
+        }
+        .boundary-card p {
+            color: #78350f;
+            font-size: 0.95rem;
+        }
+        .specialty-note {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 3rem 0;
+        }
+        .specialty-note h3 {
+            color: #1e40af;
+            margin-bottom: 0.75rem;
+        }
+        .specialty-note p {
+            color: #1e3a8a;
+            line-height: 1.7;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">PHX Plumber Pros</div>
+            <div class="phone">📞 (623) 323-8664</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>We Handle Residential & Light Commercial Plumbing</h1>
+        <p>Focused on homes, apartments, and small commercial properties across Phoenix.</p>
+    </section>
+
+    <div class="container">
+        <div class="scope-intro">
+            <h2>Our Plumbing Focus</h2>
+            <p>We limit our work to residential and light commercial plumbing. By staying focused, we can maintain the right equipment, keep parts in stock, and price jobs competitively without the overhead of large commercial operations.</p>
+        </div>
+
+        <section class="scope-section">
+            <h2>Plumbing Work We Handle</h2>
+            <div class="scope-grid">
+                <div class="scope-card">
+                    <h3>Residential Homes</h3>
+                    <p>Single-family homes and condos. Repairs, remodels, and new construction plumbing. Water heaters, fixtures, and whole-home repipes.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>Apartments & Multi-Family</h3>
+                    <p>Apartment units, duplexes, and small multi-family buildings. Tenant repairs and property management work.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>Small Commercial</h3>
+                    <p>Office buildings, retail shops, and restaurants under 5,000 sq ft. Restrooms, break rooms, and basic commercial plumbing.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>Emergency Repairs</h3>
+                    <p>Burst pipes, water leaks, clogged drains, and water heater failures for residential and light commercial.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>Bathroom & Kitchen Remodels</h3>
+                    <p>Fixture installation, drain relocation, and supply line work for residential renovations.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>Water Heater Service</h3>
+                    <p>Tank and tankless water heater installation, repair, and replacement for homes and small buildings.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="boundaries-section">
+            <h2>What We Don't Do</h2>
+            <div class="boundaries-grid">
+                <div class="boundary-card">
+                    <h3>Large Commercial Buildings</h3>
+                    <p>We don't work on big commercial projects, high-rises, or industrial facilities. Different licensing and equipment required.</p>
+                </div>
+
+                <div class="boundary-card">
+                    <h3>Municipal & Underground</h3>
+                    <p>We don't handle city water mains, sewer lines beyond the property line, or municipal infrastructure work.</p>
+                </div>
+
+                <div class="boundary-card">
+                    <h3>Pool Plumbing</h3>
+                    <p>Pool equipment and pool plumbing systems require specialized knowledge we don't maintain.</p>
+                </div>
+
+                <div class="boundary-card">
+                    <h3>Gas Line Work</h3>
+                    <p>We don't install or repair natural gas lines. Requires different certification and insurance.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="specialty-note">
+            <h3>🔧 Why Limit Our Scope?</h3>
+            <p>Residential and light commercial plumbing keeps us busy year-round without the complexity of large commercial jobs. We can stock the right parts, maintain residential-focused equipment, and keep our pricing reasonable. Large commercial work requires different insurance, bonding, and equipment that would increase overhead for all customers.</p>
+        </div>
+
+        <section class="form-section">
+            <h2>Request Service</h2>
+            <p class="subtitle">Tell us about your plumbing needs</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="PHX-PLUM-001">
+                <input type="hidden" name="market" value="Phoenix">
+                <input type="hidden" name="industry" value="Plumbers">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="phxplumberpros.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="property_type">Property Type *</label>
+                    <select id="property_type" name="property_type" required>
+                        <option value="">Select...</option>
+                        <option value="Single Family Home">Single Family Home</option>
+                        <option value="Condo/Townhome">Condo/Townhome</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Small Commercial">Small Commercial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="service_type">Service Needed *</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="">Select...</option>
+                        <option value="Emergency Repair">Emergency Repair</option>
+                        <option value="Leak Repair">Leak Repair</option>
+                        <option value="Drain Cleaning">Drain Cleaning</option>
+                        <option value="Water Heater">Water Heater</option>
+                        <option value="Fixture Installation">Fixture Installation</option>
+                        <option value="Remodel">Remodel</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Problem Description *</label>
+                    <textarea id="details" name="details" required placeholder="Describe the plumbing issue..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Get Service</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 PHX Plumber Pros. Residential & Light Commercial Plumbing.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
